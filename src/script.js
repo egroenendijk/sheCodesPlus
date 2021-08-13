@@ -36,7 +36,7 @@ let months = [
 let month = months[now.getMonth()];
 
 currentDate.innerHTML = `${day} ${month} ${date}`;
-currentTime.innerHTML = `${hours}: ${minutes}`;
+currentTime.innerHTML = `${hours}:${minutes}`;
 
 // Homework week 4 Feature #2
 function search(event) {
@@ -80,7 +80,7 @@ function weatherCondition(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
-  celciusTemperature = response.data.main.temp;
+  celsiusTemperature = response.data.main.temp;
 
   let apiKey = "ff48e8f1972c30f87339cf84950e7d10";
   let unit = "metric";
@@ -113,17 +113,17 @@ currentButton.addEventListener("click", findLocation);
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  let fahrenheitTemperature = (celciusTemperature * 9) / 5 + 32;
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
-function displayCelciusTemperature(event) {
+function displayCelsiusTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celciusTemperature);
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
-let celciusTemperature = null;
+let celsiusTemperature = null;
 
 let form = document.querySelectorAll("#search-form");
 form.addEventListener("submit", handleSubmit);
@@ -131,5 +131,5 @@ form.addEventListener("submit", handleSubmit);
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
-let celciusLink = document.querySelector("#celcius-link");
-celciusLink.addEventListener("click", displayCelciusTemperature);
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
