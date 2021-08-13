@@ -73,14 +73,14 @@ function weatherCondition(response) {
   let wind = document.querySelector("#wind");
   wind.innerHTML = Math.round(response.data.wind.speed);
 
-  let iconElement = document.querySelector("#forecast-icon-1");
+  let iconElement = document.querySelector("#forecast-icon-0");
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
-  let iconElement = document.querySelector("#forecast-icon-2");
+  let iconElement = document.querySelector("#forecast-icon-1");
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[1].icon}@2x.png`
