@@ -80,6 +80,8 @@ function weatherCondition(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
+  celciusTemperature = response.data.main.temp;
+
   let apiKey = "ff48e8f1972c30f87339cf84950e7d10";
   let unit = "metric";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
