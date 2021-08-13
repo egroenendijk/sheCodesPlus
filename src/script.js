@@ -62,7 +62,7 @@ function weatherCondition(response) {
   city.innerHTML = response.data.name;
 
   let temperature = document.querySelector("#temperature");
-  temperature.innerHTML = Math.round(response.data.main.temp);
+  temperature.innerHTML = Math.round(response.data.main.temp[0]);
 
   let description = document.querySelector("#temperature-description");
   description.innerHTML = response.data.weather[0].description;
@@ -115,7 +115,6 @@ function displayFahrenheitTemperature(event) {
   let temperatureElement = document.querySelector("#temperature");
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-  alert("Hello");
 }
 
 function displayCelsiusTemperature(event) {
