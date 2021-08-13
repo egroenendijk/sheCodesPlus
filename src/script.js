@@ -62,7 +62,7 @@ function weatherCondition(response) {
   city.innerHTML = response.data.name;
 
   let temperature = document.querySelector("#temperature");
-  temperature.innerHTML = Math.round(response.data.main.temp[0]);
+  temperature.innerHTML = Math.round(response.data.main.temp);
 
   let description = document.querySelector("#temperature-description");
   description.innerHTML = response.data.weather[0].description;
