@@ -115,6 +115,7 @@ function displayFahrenheitTemperature(event) {
   let temperatureElement = document.querySelector("#temperature");
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+  alert("Hello");
 }
 
 function displayCelsiusTemperature(event) {
