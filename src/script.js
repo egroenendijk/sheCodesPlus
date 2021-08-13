@@ -16,7 +16,7 @@ let days = [
   "Wednesday",
   "Thursday",
   "Friday",
-  "Saturday"
+  "Saturday",
 ];
 let day = days[now.getDay()];
 let months = [
@@ -31,7 +31,7 @@ let months = [
   "September",
   "October",
   "November",
-  "December"
+  "December",
 ];
 let month = months[now.getMonth()];
 
@@ -72,6 +72,13 @@ function weatherCondition(response) {
 
   let wind = document.querySelector("#wind");
   wind.innerHTML = Math.round(response.data.wind.speed);
+
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x/png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 
   let apiKey = "ff48e8f1972c30f87339cf84950e7d10";
   let unit = "metric";
