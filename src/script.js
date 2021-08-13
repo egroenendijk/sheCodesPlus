@@ -108,7 +108,7 @@ function findLocation(event) {
 let currentButton = document.querySelector(".current-button");
 currentButton.addEventListener("click", findLocation);
 
-function displayFahrenheitTemperature(event){
+function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
   let fahrenheitTemperature = (celciusTemperatuyre * 9) / 5 + 32;
@@ -127,4 +127,4 @@ let farhenheitLink = document.querySelector("#farhenheit-link");
 farhenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celciusLink = document.querySelector("#celcius-link");
-celciusLink.addEventListener("click", displayCelciusTemperature;
+celciusLink.addEventListener("click", displayCelciusTemperature);
