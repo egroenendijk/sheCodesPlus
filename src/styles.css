@@ -63,6 +63,7 @@ p {
 .current-forecast .active {
   color: #333133;
   cursor: default;
+  text-decoration: none;
 }
 
 .current-forecast .active:hover {
