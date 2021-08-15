@@ -59,6 +59,16 @@ p {
   border-width: 1px;
   padding: 10px;
 }
+
+.current-forecast .active {
+  color: #333133;
+  cursor: default;
+}
+
+.current-forecast .active:hover {
+  text-decoration: none;
+}
+
 .city {
   border-style: solid;
   border-width: 1px;
