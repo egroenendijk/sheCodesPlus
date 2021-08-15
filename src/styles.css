@@ -60,13 +60,13 @@ p {
   padding: 10px;
 }
 
-.current-forecast .active {
+.units .active {
   color: #333133;
   cursor: default;
   text-decoration: none;
 }
 
-.current-forecast .active:hover {
+.units .active:hover {
   text-decoration: none;
 }
 
