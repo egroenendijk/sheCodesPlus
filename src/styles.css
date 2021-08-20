@@ -48,9 +48,9 @@ p {
   transition: all 0.3s;
   width: 100px;
 }
-.search:hover {
+.search.hover {
   background: white;
-  border: 2px solid #33313;
+  border: 2px solid #333133;
   color: #333133;
   cursor: pointer;
 }
