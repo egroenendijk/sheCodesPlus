@@ -84,9 +84,25 @@ p {
   font-size: 80px;
   padding: 25px;
 }
-.week-forecast p {
+.weather-forecast {
+  color: #000;
+  margin-top: 20px;
   text-align: center;
 }
+
+.weather-forecast-date {
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+.weather-forecast-temperatures {
+  font-size: 13px;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.5;
+}
+
 .fa-cloud-sun {
   font-size: 30px;
 }
