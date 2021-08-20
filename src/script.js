@@ -173,6 +173,8 @@ function displayForecast(response) {
   forecastElement.innerHTML = forecastHTML;
 }
 
+displayForecast();
+
 // Get forecast
 
 function getForecast(coordinates) {
