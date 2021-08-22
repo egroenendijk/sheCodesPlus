@@ -1,4 +1,4 @@
-// Homework week 4 Feature #1
+// Date and time
 
 let now = new Date();
 
@@ -38,7 +38,8 @@ let month = months[now.getMonth()];
 currentDate.innerHTML = `${day} ${month} ${date}`;
 currentTime.innerHTML = `${hours}:${minutes}`;
 
-// Homework week 4 Feature #2
+// Search
+
 function search(event) {
   event.preventDefault();
   let cityElement = document.querySelector("#city");
@@ -55,7 +56,7 @@ function search(event) {
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
 
-// Homework week 5 search engine
+// Weather
 
 function weatherCondition(response) {
   let city = document.querySelector("#city");
@@ -89,8 +90,6 @@ let apiKey = "ff48e8f1972c30f87339cf84950e7d10";
 let unit = "metric";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
 
-// Homework week 5 current location
-
 function locatePosition(position) {
   let longitude = position.coords.longitude;
   let latitude = position.coords.latitude;
@@ -110,21 +109,23 @@ function findLocation(event) {
 let currentButton = document.querySelector(".current-button");
 currentButton.addEventListener("click", findLocation);
 
+// Unit conversion
+
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-  celsiusLink.classlist.remove("active");
-  fahrenheitLink.classlist.add("active");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
 }
 
 function displayCelsiusTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
-  celsiusLink.classlist.add("active");
-  fahrenheitLink.classlist.remove("active");
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
 }
 
 let celsiusTemperature = null;
@@ -138,7 +139,7 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
-// Final project
+// Forecast
 
 function displayForecast(response) {
   let forecast = response.data.daily;

@@ -12,12 +12,14 @@ h2 {
   text-transform: capitalize;
 }
 p {
+  font-size: 15px;
   text-align: left;
 }
+
 .weather-app {
   border-style: solid;
   border-width: 1px;
-  background: #f7edeb;
+  background: #f5ebdf;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   padding: 20px;
@@ -60,13 +62,17 @@ p {
   padding: 10px;
 }
 
+.units a {
+  text-decoration: none;
+  color: #ec6e4c;
+}
+
 .units .active {
   color: #333133;
   cursor: default;
-  text-decoration: none;
 }
 
-.units .active:hover {
+.unites .active:hover {
   text-decoration: none;
 }
 
