@@ -38,24 +38,6 @@ let month = months[now.getMonth()];
 currentDate.innerHTML = `${day} ${month} ${date}`;
 currentTime.innerHTML = `${hours}:${minutes}`;
 
-// Search
-
-function search(event) {
-  event.preventDefault();
-  let cityElement = document.querySelector("#city");
-  let cityInput = document.querySelector("#search-input");
-  cityElement.innerHTML = cityInput.value;
-
-  let apiKey = "ff48e8f1972c30f87339cf84950e7d10";
-  let unit = "metric";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&appid=${apiKey}&units=${unit}`;
-
-  axios.get(apiUrl).then(weatherCondition);
-}
-
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", search);
-
 // Weather
 
 function weatherCondition(response) {
@@ -190,3 +172,24 @@ function formatDay(timestamp) {
 
   return days[day];
 }
+
+// Search
+
+function search(event) {
+  event.preventDefault();
+  let cityElement = document.querySelector("#city");
+  let cityInput = document.querySelector("#search-input");
+  cityElement.innerHTML = cityInput.value;
+
+  searchCity(cityInput.value);
+}
+
+function searchCity(city) {
+  let apiKey = "ff48e8f1972c30f87339cf84950e7d10";
+  let unit = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
+
+  axios.get(apiUrl).then(weatherCondition);
+}
+
+searchCity("Amsterdam");
